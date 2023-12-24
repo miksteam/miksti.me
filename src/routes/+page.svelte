@@ -1,7 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import image from '$lib/images/image.jpeg';
 </script>
 
 <svelte:head>
@@ -10,50 +8,38 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+	<img src={image} alt="" />
+	<h1>Михаил Балицкий</h1>
+	<a href="https://t.me/mikstime"> t.me/mikstime </a>
 </section>
 
 <style>
 	section {
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		align-items: center;
-		flex: 0.6;
+		justify-content: center;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	a:visited,
+	a {
+		color: white;
+		text-decoration: none;
+		font-size: 2rem;
 	}
 
 	h1 {
-		width: 100%;
+		font-size: 3rem;
+		text-align: center;
+		height: 5rem;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	img {
+		height: 70vw;
+		border-radius: 50%;
+		pointer-events: none;
+		user-select: none;
+		margin-top: 2rem;
 	}
 </style>
