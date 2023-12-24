@@ -1,45 +1,25 @@
 <script>
-	import image from '$lib/images/image.jpeg';
+	import Feed from './Feed.svelte';
+	import Header from './Header.svelte';
+	import Social from './Social.svelte';
+	import me from '$lib/images/me.jpg'
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Mikstime's Personal Page</title>
 	<meta name="description" content="Svelte demo app" />
+	<meta property="og:title" content="Michael Balitsky" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Frontend related person" />
+	<meta property="og:image" content={me} />
+	<meta property="og:url" content="https://miksti.me/" />
+	<meta name="twitter:card" content={me} />
+	<meta name="keywords" content="Michael Balitsky, Михаил Балицкий, mikstime">
 </svelte:head>
 
-<section>
-	<img src={image} alt="" />
-	<h1>Михаил Балицкий</h1>
-	<a href="https://t.me/mikstime"> t.me/mikstime </a>
-</section>
+<Header />
+<Social />
+<Feed />
 
 <style>
-	section {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
-		min-height: 100%;
-	}
-
-	a:visited,
-	a {
-		color: white;
-		text-decoration: none;
-		font-size: 2rem;
-	}
-
-	h1 {
-		font-size: 3rem;
-		text-align: center;
-		height: 5rem;
-	}
-
-	img {
-		height: 70vw;
-		border-radius: 50%;
-		pointer-events: none;
-		user-select: none;
-		margin-top: 2rem;
-	}
 </style>
