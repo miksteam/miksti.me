@@ -51,7 +51,8 @@
 
 	@media only screen and (max-width: 800px) {
         .feed__post {
-		    padding: 13px 24px;
+		    padding: 0 24px;
+			margin-bottom: 24px;
         }
 
 		.feed__title {
@@ -65,7 +66,8 @@
 
 	@media only screen and (max-width: 320px) {
         .feed__post {
-		    padding: 13px 16px;
+		    padding: 0 16px;
+			margin-bottom: 16px;
         }
 	}
 
