@@ -7,7 +7,7 @@
 
 <svelte:head>
 	<title>Mikstime's Personal Page</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Collection of articles" />
 	<meta property="og:title" content="Michael Balitsky" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="Frontend related person" />
