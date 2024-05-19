@@ -1,4 +1,5 @@
 <section class="social">
+    <h2 class="a11y-hidden"></h2>
     <a
         target="_blank"
         rel="noopener"
@@ -17,6 +18,17 @@
 	</a>
 </section>
 <style>
+    .a11y-hidden {
+        font-weight: 400;
+        height: 1px;
+        left: auto;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 1px;
+        clip: rect(1px 1px 1px 1px);
+    }
+
 	.social {
         display: flex;
         margin: 0;
