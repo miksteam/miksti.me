@@ -1,5 +1,5 @@
 <section class="social">
-    <h2 class="a11y-hidden"></h2>
+    <h2 class="a11y-hidden">Social Media</h2>
     <a
         target="_blank"
         rel="noopener"
