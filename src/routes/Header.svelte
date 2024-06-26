@@ -25,7 +25,7 @@
 
 	.header__top::after {
 		content: '';
-		background-image: url(me.jpg);
+		background-image: url($lib/images/me.jpg);
 		background-size: cover;
 		background-position: right;
 		background-repeat: no-repeat;
