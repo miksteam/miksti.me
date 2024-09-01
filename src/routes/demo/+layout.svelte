@@ -41,6 +41,7 @@
 		border-radius: 8px;
 		background-color: white;
 		font-size: 16px;
+		color: black;
 	}
 
 	:global(tbody tr:nth-child(even)) {
