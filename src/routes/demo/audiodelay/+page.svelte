@@ -106,6 +106,7 @@
 		<button
 			class="volume__button"
 			class:volume__button_muted_yes={isMuted}
+			aria-keyshortcuts="m"
 			aria-label={isMuted ? 'Unmute' : 'Mute'}
 			on:click={onMuteToggle}
 		/>
@@ -119,10 +120,10 @@
 </section>
 <output class="latency-preview">Current Latency: <b>{latency}</b></output>
 {#if !hasLatencySupport}
-	<div class="warning">
-		<p class="warning__paragraph">
+	<div class="callout warning">
+		<p class="callout__paragraph">
 			This demo is not supported by your browser. Try using different browser (<a
-				class="warning__link"
+				class="link"
 				target="_blank"
 				rel="noopener noreferrer"
 				href="https://caniuse.com/mdn-api_audiocontext_outputlatency">supported browsers</a

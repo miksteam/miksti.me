@@ -1,19 +1,29 @@
 <slot />
 
 <style>
-	:global(.warning) {
+	:global(.callout) {
 		margin: 16px 0;
 		padding: 8px 16px;
-		background: rgba(214, 0, 0, 0.21);
 		border-radius: 16px;
 	}
 
-	:global(.warning__paragraph) {
+	:global(.warning) {
+		background: rgba(214, 0, 0, 0.21);
+	}
+
+	:global(.info) {
+		background: rgba(69, 94, 101, 0.21);
+	}
+	:global(.callout__paragraph) {
 		margin: 0;
 	}
 
-	:global(.warning__link, .warning__link:visited) {
-		color: white;
+	:global(.link) {
+		color: #5e67ff;
+	}
+
+	:global(.link:visited) {
+		color: #5c31c9;
 	}
 
 	:global(.main-section) {
@@ -23,6 +33,34 @@
 
 	:global(code) {
 		color: rgba(255, 255, 255, 0.8);
+	}
+
+	:global(.button) {
+		padding: 8px;
+		border: none;
+		border-radius: 8px;
+		background-color: white;
+		font-size: 16px;
+	}
+
+	:global(tbody tr:nth-child(even)) {
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	:global(.table__container) {
+		width: 100%;
+		overflow-x: auto;
+	}
+	:global(.table__container table) {
+		width: 100%;
+	}
+
+	:global(.table__container td) {
+		padding: 8px;
+	}
+
+	:global(table caption) {
+		padding: 20px 0;
 	}
 
 	@media only screen and (max-width: 800px) {
