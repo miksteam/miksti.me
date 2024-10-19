@@ -1,6 +1,11 @@
 {
-	"name": "my-app",
+	"name": "miksti.me",
 	"version": "0.0.1",
+	"engines": {
+		"node": "20",
+		"npm": "10"
+	},
+	"private": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
