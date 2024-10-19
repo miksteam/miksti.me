@@ -1,5 +1,15 @@
 <section class="feed">
 	<h2 class="feed__title">MY LATEST ARTICLES</h2>
+	<article class="feed__post feed__post_3">
+		<a
+			class="feed__post-link"
+			target="_blank"
+			rel="noopener"
+			aria-label="Effortless and Secure Clipboard Magic with the Clipboard API. No."
+			href="/demo/clipboard"
+		>
+		</a>
+	</article>
 	<article class="feed__post feed__post_1">
 		<a
 			class="feed__post-link"
@@ -7,6 +17,16 @@
 			rel="noopener"
 			aria-label="How I Designed, Developed, and Deployed My Personal Website in an Evening (Mistakes Included)"
 			href="https://www.linkedin.com/pulse/how-i-designed-developed-deployed-my-personal-website-balitsky-enmhe/?utm_source=share&utm_medium=guest_desktop&utm_campaign=copy"
+		>
+		</a>
+	</article>
+	<article class="feed__post feed__post_4">
+		<a
+			class="feed__post-link"
+			target="_blank"
+			rel="noopener"
+			aria-label="Challenges with AudioContext.outputLatency in Web Audio"
+			href="/demo/audiodelay"
 		>
 		</a>
 	</article>
@@ -47,6 +67,14 @@
 
 	.feed__post_2 .feed__post-link {
 		background-image: url($lib/images/sveltekit-over-nextjs.png);
+	}
+
+	.feed__post_3 .feed__post-link {
+		background-image: url($lib/images/clipboard.png);
+	}
+
+	.feed__post_4 .feed__post-link {
+		background-image: url($lib/images/audiodelay.png);
 	}
 
 	@media only screen and (max-width: 800px) {
