@@ -89,7 +89,7 @@
 			wasCopied = false;
 		}
 		wasPasted = true;
-		clipboardContents = contents.filter(content => content.length > 0);
+		clipboardContents = contents.filter((content) => content.length > 0);
 	};
 
 	async function tryPasting(items: Record<string, string | Blob>[]) {
@@ -200,23 +200,25 @@
 <h1>Clipboard API</h1>
 <p>
 	The Clipboard API is a replacement for the deprecated document.execCommand() and is currently
-	under development.
+	under development. It allows for advanced features like customized content and multi-format data support, enabling richer interactions.
 </p>
 <p>
-	There are some inconsistencies across different browsers. Check the <a
-		class="link"
-		target="_blank"
-		rel="noopener noreferrer"
-		href="https://caniuse.com/?search=Clipboard%20API">Browser compatibility table</a
-	>
-	for more details.
+	
+	The API enhances control and security by ensuring precise data transfer and protecting against unauthorized clipboard interference.
 </p>
+<h2>Inconsistent Support</h2>
 <p>
-	Safari does not throw an error for unsupported formats and allows copying text anyway, whereas
-	Chrome and Firefox do. Safari and Firefox might prompt you before pasting, while Chrome might
-	request permissions once.
+	In Safari, unsupported formats don't result in an error, and you can still proceed with copying
+	text. However, Chrome and Firefox might throw an error when faced with unsupported formats.
 </p>
+	<p>
+	Additionally, Safari and Firefox may prompt you before pasting text, whereas Chrome might request
+	permissions only once.
+</p>
+<h2>Demo </h2>
 <p>You can use this demo to check what is supported by your browser.</p>
+<hr />
+
 <section class="clipboard-actions">
 	<button class="button" on:click={onPaste}>Paste</button>
 
@@ -297,9 +299,7 @@
 	</div>
 	{#if wasPasted && clipboardContents.length === 0}
 		<div class="callout info">
-			<p class="callout__paragraph">
-				Nothin to paste
-			</p>
+			<p class="callout__paragraph">Nothing to paste</p>
 		</div>
 	{:else if wasPasted}
 		<div class="table__container">

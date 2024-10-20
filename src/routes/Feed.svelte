@@ -1,6 +1,6 @@
 <section class="feed">
 	<h2 class="feed__title">MY LATEST ARTICLES</h2>
-	<article class="feed__post feed__post_3">
+	<article class="feed__post feed__post_1">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -10,7 +10,17 @@
 		>
 		</a>
 	</article>
-	<article class="feed__post feed__post_1">
+	<article class="feed__post feed__post_2">
+		<a
+			class="feed__post-link"
+			target="_blank"
+			rel="noopener"
+			aria-label="Challenges with AudioContext.outputLatency in Web Audio"
+			href="/demo/audiodelay"
+		>
+		</a>
+	</article>
+	<article class="feed__post feed__post_3">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -21,16 +31,6 @@
 		</a>
 	</article>
 	<article class="feed__post feed__post_4">
-		<a
-			class="feed__post-link"
-			target="_blank"
-			rel="noopener"
-			aria-label="Challenges with AudioContext.outputLatency in Web Audio"
-			href="/demo/audiodelay"
-		>
-		</a>
-	</article>
-	<article class="feed__post feed__post_2">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -61,19 +61,19 @@
 		border-radius: 30px;
 	}
 
-	.feed__post_1 .feed__post-link {
+	.feed__post_3 .feed__post-link {
 		background-image: url($lib/images/how-i-designed-my-website.png);
 	}
 
-	.feed__post_2 .feed__post-link {
+	.feed__post_4 .feed__post-link {
 		background-image: url($lib/images/sveltekit-over-nextjs.png);
 	}
 
-	.feed__post_3 .feed__post-link {
+	.feed__post_1 .feed__post-link {
 		background-image: url($lib/images/clipboard.png);
 	}
 
-	.feed__post_4 .feed__post-link {
+	.feed__post_2 .feed__post-link {
 		background-image: url($lib/images/audiodelay.png);
 	}
 
