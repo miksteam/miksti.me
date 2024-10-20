@@ -80,14 +80,27 @@
 <svelte:window on:keydown={onKeydown} />
 <h1>Audio Delay</h1>
 <p>
-	If you are using wireless headphones or speakers to play this demo you might experience a delay
-	during first audio playthrough.
+	AudioContext.outputLatency is a property in the Web Audio API that provides an estimate of the audio output latency of an AudioContext. This represents the delay between when an audio buffer is scheduled for playback and when it is actually heard through the speakers.
 </p>
+<h2>Inconsistent Support</h2>
 <p>
-	<code>AudioContext.outputLatency</code> should solve this problem by returning an estimated delay greater
-	than zero. However it is likely to be zero for the first few seconds of a playback. Latency varies
+	The delay returned from AudioContext.outputLatency is likely to be zero for the first few seconds of a playback. Latency varies
 	depending on the platform and the available hardware.
 </p>
+<p>
+	The output latency can change due to various factors, like system load or audio processing needs,
+	making it challenging to predict and compensate for latency accurately.
+</p>
+<p>
+	It provides a general estimate of latency, which might not be granular enough for
+	applications requiring extremely tight timing control.
+</p>
+<h2>Demo </h2>
+<p>
+	If you are using wireless headphones or speakers to play this demo you might experience a delay between audio and animation
+	during first playthrough.
+</p>
+<hr />
 <section class="demo">
 	<audio bind:this={audio} on:canplaythrough={onCanPLayThrough} preload="auto">
 		<source src={fall} />
