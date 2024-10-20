@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import fall from './fall.mp3';
-	import pipePng from './pipe.png';
-	import pipeWebp from './pipe.webp';
+	import fall from './audiodelay.assets/fall.mp3';
+	import pipePng from './audiodelay.assets/pipe.png';
+	import pipeWebp from './audiodelay.assets/pipe.webp';
 
 	let audioContext: AudioContext;
 	let latency: string = 'click on pipe to evaluate';

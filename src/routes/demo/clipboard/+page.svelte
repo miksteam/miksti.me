@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	const images = import.meta.glob('./*.(svg|png)', {
+	const images = import.meta.glob('./clipboard.assets/*.(svg|png)', {
 		as: 'url',
 		eager: true
 	});
@@ -141,8 +141,8 @@
 		wasCopied = true;
 		wasPasted = false;
 
-		const blob = await fetch(images[`./${stars}.png`]).then((r) => r.blob());
-		const blobSvg = await fetch(images[`./${stars}.svg`]).then((r) => r.blob());
+		const blob = await fetch(images[`./clipboard.assets/${stars}.png`]).then((r) => r.blob());
+		const blobSvg = await fetch(images[`./clipboard.assets/${stars}.svg`]).then((r) => r.blob());
 		// safari workaround https://stackoverflow.com/a/77517883
 		setTimeout(async () => {
 			const items = [

@@ -1,6 +1,19 @@
+<script lang="ts">
+	import clipboardPng from './Feed.assets/clipboard.png';
+	import clipboardWebp from './Feed.assets/clipboard.webp';
+
+	import audiodelayPng from './Feed.assets/audiodelay.png';
+	import audiodelayWebp from './Feed.assets/audiodelay.webp';
+
+	import howIDesignedMyWebsitePng from './Feed.assets/how-i-designed-my-website.png';
+	import howIDesignedMyWebsiteWebp from './Feed.assets/how-i-designed-my-website.webp';
+
+	import sveltekitOverNextjsPng from './Feed.assets/sveltekit-over-nextjs.png';
+	import sveltekitOverNextjsWebp from './Feed.assets/sveltekit-over-nextjs.webp';
+</script>
 <section class="feed">
 	<h2 class="feed__title">MY LATEST ARTICLES</h2>
-	<article class="feed__post feed__post_1">
+	<article class="feed__post">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -8,9 +21,13 @@
 			aria-label="Effortless and Secure Clipboard Magic with the Clipboard API. No."
 			href="/demo/clipboard"
 		>
+			<picture>
+				<source type="image/webp" srcset={clipboardWebp} />
+				<img class="feed__post-img" src={clipboardPng} alt="" style="background-color: #212a44;"/>
+			</picture>
 		</a>
 	</article>
-	<article class="feed__post feed__post_2">
+	<article class="feed__post">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -18,9 +35,13 @@
 			aria-label="Challenges with AudioContext.outputLatency in Web Audio"
 			href="/demo/audiodelay"
 		>
+			<picture>
+				<source type="image/webp" srcset={audiodelayWebp} />
+				<img class="feed__post-img" src={audiodelayPng} alt="" style="background-color: #2e315c;"/>
+			</picture>
 		</a>
 	</article>
-	<article class="feed__post feed__post_3">
+	<article class="feed__post">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -28,9 +49,13 @@
 			aria-label="How I Designed, Developed, and Deployed My Personal Website in an Evening (Mistakes Included)"
 			href="https://www.linkedin.com/pulse/how-i-designed-developed-deployed-my-personal-website-balitsky-enmhe/?utm_source=share&utm_medium=guest_desktop&utm_campaign=copy"
 		>
+			<picture>
+				<source type="image/webp" srcset={howIDesignedMyWebsiteWebp} />
+				<img class="feed__post-img" src={howIDesignedMyWebsitePng} alt="" style="background-color: #732d2c;"/>
+			</picture>
 		</a>
 	</article>
-	<article class="feed__post feed__post_4">
+	<article class="feed__post">
 		<a
 			class="feed__post-link"
 			target="_blank"
@@ -38,6 +63,10 @@
 			aria-label="Choosing SvelteKit Over Next.js for My Next Project"
 			href="https://www.linkedin.com/pulse/choosing-sveltekit-over-nextjs-my-next-project-michael-balitsky-c3jte?utm_source=share&utm_medium=guest_desktop&utm_campaign=copy"
 		>
+			<picture>
+				<source type="image/webp" srcset={sveltekitOverNextjsWebp} />
+				<img class="feed__post-img" src={sveltekitOverNextjsPng} alt="" style="background-color: #161616;"/>
+			</picture>
 		</a>
 	</article>
 </section>
@@ -58,23 +87,15 @@
 		display: block;
 		padding-bottom: 56.25%;
 		background-size: cover;
+		position: relative;
+	}
+
+	.feed__post-img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
 		border-radius: 30px;
-	}
-
-	.feed__post_3 .feed__post-link {
-		background-image: url($lib/images/how-i-designed-my-website.png);
-	}
-
-	.feed__post_4 .feed__post-link {
-		background-image: url($lib/images/sveltekit-over-nextjs.png);
-	}
-
-	.feed__post_1 .feed__post-link {
-		background-image: url($lib/images/clipboard.png);
-	}
-
-	.feed__post_2 .feed__post-link {
-		background-image: url($lib/images/audiodelay.png);
+		pointer-events: none;
 	}
 
 	@media only screen and (max-width: 800px) {
