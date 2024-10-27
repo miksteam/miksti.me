@@ -5,7 +5,7 @@
 <header class="header">
 	<div class="header__top">
 		{#if href}
-			<a class="header__name header__link" {href}>Michael Balitsky</a>
+			<a class="header__name header__link" href={href}>Michael Balitsky</a>
 		{:else}
 			<h1 class="header__name">Michael Balitsky</h1>
 		{/if}
