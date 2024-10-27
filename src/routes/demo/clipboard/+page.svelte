@@ -197,7 +197,7 @@
 </script>
 <svelte:head>
 	<title>Clipboard API</title>
-	<meta name="description" content="Collection of articles" />
+	<meta name="description" content="Effortless and Secure Clipboard Magic with the Clipboard API. No." />
 	<meta property="og:title" content="Clipboard API" />
 	<meta property="og:type" content="article" />
 	<meta property="og:description" content="Effortless and Secure Clipboard Magic with the Clipboard API. No." />
