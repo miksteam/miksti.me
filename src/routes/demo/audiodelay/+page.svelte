@@ -79,8 +79,8 @@
 </script>
 <svelte:head>
 	<title>Audio Delay</title>
-	<meta name="description" content="Collection of articles" />
-	<meta property="og:title" content="Clipboard API" />
+	<meta name="description" content="Challenges with AudioContext.outputLatency in Web Audio" />
+	<meta property="og:title" content="Audio Delay" />
 	<meta property="og:type" content="article" />
 	<meta property="og:description" content="Challenges with AudioContext.outputLatency in Web Audio" />
 	<meta property="og:image" content={audiodelayPng} />
