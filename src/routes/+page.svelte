@@ -2,6 +2,7 @@
 	import Feed from './Feed/Feed.svelte';
 	import Header from './Header.svelte';
 	import Social from './Social.svelte';
+	import meJpg from '$lib/images/me.jpg'
 </script>
 <svelte:head>
 	<title>Mikstime's Personal Page</title>
@@ -9,8 +10,8 @@
 	<meta property="og:title" content="Michael Balitsky" />
 	<meta property="og:type" content="website" />
 	<meta property="og:description" content="Frontend related person" />
-	<meta property="og:image" content="%sveltekit.assets%/me.jpg" />
-	<meta property="og:url" content="https://miksti.me/" />
+	<meta property="og:image" content={meJpg} />
+	<meta property="og:url" content={meJpg} />
 	<meta name="twitter:card" content="%sveltekit.assets%/me.jpg" />
 	<meta name="keywords" content="Michael Balitsky, Михаил Балицкий, mikstime" />
 </svelte:head>
