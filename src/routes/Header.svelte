@@ -1,8 +1,18 @@
+<script lang="ts">
+	export let href: string;
+</script>
+
 <header class="header">
 	<div class="header__top">
-		<h1 class="header__name">Michael Balitsky</h1>
+		{#if href}
+			<a class="header__name header__link" {href}>Michael Balitsky</a>
+		{:else}
+			<h1 class="header__name">Michael Balitsky</h1>
+		{/if}
 	</div>
-	<h2 class="header__description">Frontend related person</h2>
+	{#if !href}
+		<h2 class="header__description">Frontend related person</h2>
+	{/if}
 </header>
 
 <style>
@@ -42,6 +52,12 @@
 		font-size: 3.6rem;
 		padding-right: 8px;
 		font-weight: 400;
+	}
+
+	.header__link,
+	header__link:visited {
+		text-decoration: none;
+		color: black;
 	}
 
 	@media only screen and (max-width: 800px) {

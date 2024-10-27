@@ -16,7 +16,6 @@
 	<article class="feed__post">
 		<a
 			class="feed__post-link"
-			target="_blank"
 			rel="noopener"
 			aria-label="Effortless and Secure Clipboard Magic with the Clipboard API. No."
 			href="/demo/clipboard"
@@ -30,7 +29,6 @@
 	<article class="feed__post">
 		<a
 			class="feed__post-link"
-			target="_blank"
 			rel="noopener"
 			aria-label="Challenges with AudioContext.outputLatency in Web Audio"
 			href="/demo/audiodelay"

@@ -3,6 +3,7 @@
 	import fall from './audiodelay.assets/fall.mp3';
 	import pipePng from './audiodelay.assets/pipe.png';
 	import pipeWebp from './audiodelay.assets/pipe.webp';
+	import audiodelayPng from '../../Feed/Feed.assets/audiodelay.png';
 
 	let audioContext: AudioContext;
 	let latency: string = 'click on pipe to evaluate';
@@ -76,7 +77,17 @@
 		hasLatencySupport = 'outputLatency' in AudioContext.prototype;
 	});
 </script>
-
+<svelte:head>
+	<title>Audio Delay</title>
+	<meta name="description" content="Collection of articles" />
+	<meta property="og:title" content="Clipboard API" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="Challenges with AudioContext.outputLatency in Web Audio" />
+	<meta property="og:image" content={audiodelayPng} />
+	<meta property="og:url" content="https://miksti.me/demo/clipboard" />
+	<meta name="twitter:card" content={audiodelayPng} />
+	<meta name="keywords" content="Audio Delay, Michael Balitsky, Михаил Балицкий, mikstime" />
+</svelte:head>
 <svelte:window on:keydown={onKeydown} />
 <h1>Audio Delay</h1>
 <p>

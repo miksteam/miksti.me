@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import clipboardPng from '../../Feed/Feed.assets/clipboard.png';
 
 	const images = import.meta.glob('./clipboard.assets/*.(svg|png)', {
 		as: 'url',
@@ -194,7 +195,17 @@
 		}
 	}
 </script>
-
+<svelte:head>
+	<title>Clipboard API</title>
+	<meta name="description" content="Collection of articles" />
+	<meta property="og:title" content="Clipboard API" />
+	<meta property="og:type" content="article" />
+	<meta property="og:description" content="Effortless and Secure Clipboard Magic with the Clipboard API. No." />
+	<meta property="og:image" content={clipboardPng} />
+	<meta property="og:url" content="https://miksti.me/demo/clipboard" />
+	<meta name="twitter:card" content={clipboardPng} />
+	<meta name="keywords" content="Clipboard API, Michael Balitsky, Михаил Балицкий, mikstime" />
+</svelte:head>
 <svelte:window on:paste={onPaste} on:copy={onWindowCopy} />
 
 <h1>Clipboard API</h1>
