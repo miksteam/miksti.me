@@ -1,5 +1,13 @@
-<slot />
-
+<script>
+	import Header from '../Header.svelte';
+</script>
+<svelte:head>
+	<title>123</title>
+</svelte:head>
+<Header href="/"/>
+<div class="demo-page">
+	<slot />
+</div>
 <style>
 	:global(.callout) {
 		margin: 16px 0;
@@ -26,7 +34,7 @@
 		color: #5c31c9;
 	}
 
-	:global(.main-section) {
+	.demo-page {
 		box-sizing: border-box;
 		padding: 0 32px;
 	}
@@ -65,13 +73,13 @@
 	}
 
 	@media only screen and (max-width: 800px) {
-		:global(.main-section) {
+		.demo-page {
 			padding: 0 24px;
 		}
 	}
 
 	@media only screen and (max-width: 320px) {
-		:global(.main-section) {
+		.demo-page {
 			padding: 0 16px;
 		}
 
